@@ -1,0 +1,20 @@
+---
+layout: layouts/countdown.njk
+---
+<h1>
+  {{expiry.daysRemaining}} days until the library of code ceritificate expires. 
+</h1>
+{% if expiry.valid %}
+<p>
+  Great! The library of code wildcard certificate is valid!
+</p>
+{% else %}
+<p>
+  Oops! The wildcard certificate for the library of code has expired!
+</p>
+{% endif %}
+Raw Data from <a href="https://github.com/dyaa/node-ssl-checker">node-ssl-checker</a>
+<pre>
+{{expiry}}
+</pre>
+Page checked is <a href="javaarchives-statuspage.cloud.libraryofcode.org">very simple loc statuspage</a>. You may the complete source code of the page <a href="https://glitch.com/edit/#!/status-of-the-loc?path=src%2F_data%2Fexpiry.js%3A3%3A37">on glitch</a>. 

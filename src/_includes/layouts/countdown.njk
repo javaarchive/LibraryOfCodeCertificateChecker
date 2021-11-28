@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{expiry.daysRemaining}} days until loc's cert expires. </title>
+    <meta property="og:title" content="{{expiry.daysRemaining}} days until loc's cert expires." />
+    {% if expiry.valid %}
+     <meta name="description" content="Great! The loc certificate is valid!">
+    {% else %}
+    <meta name="description" content="Oh no! The loc certificate has expired!">
+    {% endif %}
+    <meta name="author" content="javaarchive">
+    <meta property="og:type" content="status" />
+    <meta property="og:url" content="https://status-of-the-loc.glitch.me/" />
+    <meta property="og:image" content="https://www.libraryofcode.org/wp-content/uploads/2020/08/cropped-library_of_code-2.png" />
+  </head>
+  <body>
+    {{ content | safe }}
+  </body>
+</html>
